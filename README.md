@@ -21,9 +21,9 @@
   GROUP PROJECT: DONE BY
   
   Laxmi prasanna,
-  Varsha,
-  Reshma,
-  Jyanthi,
+  S.Varsha,
+  SK.Reshma,
+  Jayanthi,
   Sahithya,
   Jyothirmai.
   
