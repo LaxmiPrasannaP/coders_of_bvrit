@@ -1,2 +1,18 @@
 # coders_of_bvrit
-This program/software include some topics in C
+
+     This software deals with four different types of topics, namely:
+      1. recursion
+      2. loops
+      3. if_statements
+      4. arrays
+   
+   SPECIFICATIONS:
+
+  -->  Since this program includes command line arguments execute the program as shown below:
+
+                        ./a.out space function_name(from the above mentioned names)
+
+  -->  The function_name you choose should be from the above mentioned function names then it will
+        displays the programs that are related to the above.
+  
+  -->  The data_types should be of integer type only.
