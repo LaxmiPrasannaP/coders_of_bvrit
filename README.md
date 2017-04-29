@@ -19,10 +19,11 @@
   
   
   GROUP PROJECT: DONE BY
-  Laxmi prasanna
-  Varsha
-  Reshma
-  Jyanthi
-  Sahithya
-  Jyothirmai
+  
+  Laxmi prasanna,
+  Varsha,
+  Reshma,
+  Jyanthi,
+  Sahithya,
+  Jyothirmai.
   
