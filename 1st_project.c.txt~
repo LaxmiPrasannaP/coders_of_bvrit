@@ -1,0 +1,243 @@
+#include <stdio.h> 
+#include <stdlib.h>                                                                           
+#include <string.h>
+                                                                            
+int recursion();                                                                           
+int loops();                                                                              
+int if_statements();                                                                          
+int arrays(); 
+int factorial();                                                                              
+int sum();                                                                                    
+int sum_of_numbers_in_range();                                                                
+int minimum_of_two_numbers();                                                                 
+int maximum_of_two_numbers();                                                                 
+int multiplication_in_range();                                                                
+int number_of_evennum_in_array();                                                             
+int sum_of_array();                                                                           
+int fact();                                                                                   
+int sumnum();                                                                                      
+int gotomenu();
+                                                                                              
+int recursion() {                                                                             
+    int i,r,d;                                                                                      
+    printf("\nenter your choice:\n1.factorial\n2.sum\n");                                             
+    scanf("%d",&i);                                                                               
+	if(i == 1) 
+	   r = factorial();                                                                              
+	else if (i == 2)                                                                              
+	   r = sum();                                                                                    
+	else                                                                                          
+           printf("invalid input\n");                                                                      
+    printf("%d",r);
+    printf("\nenter your choice:\n1.to continue this topic\n2.menu\n3.exit\n");
+    scanf("%d",&d);
+	if(d == 1)
+	   recursion();
+	else if(d == 2)
+ 	   return 0;
+	else
+	   exit(0);                                                                                   
+}
+                                                                                             
+int loops() {                                                                                 
+    int i,r,d;                                                                                      
+    printf("\nenter your choice:\n1.sum_of_numbers_in_range\n2.multiplication_in_range\n"); 
+    scanf("%d",&i);                                                                               
+	if(i == 1)              
+	   r = sum_of_numbers_in_range();                                                                
+	else if(i == 2)                                                                               
+ 	   r = multiplication_in_range();                                                                
+	else                                                                                          
+	   printf("invalid input\n"); 
+    printf("%d",r);
+    printf("\nenter your choice:\n1.to continue this topic\n2.menu\n3.exit\n");
+    scanf("%d",&d);
+	if(d == 1)
+	   loops();
+	else if(d == 2)
+	   return 0;
+	else
+	   exit(0);                                                                    
+                                                                                    
+}   
+                                                                                          
+int if_statements() {                                                                         
+    int i,r,d;                                                                                      
+    printf("\nenter your choice:\n1.maximum_of_two_numbers\n2.minimum_of_two_numbers\n");
+    scanf("%d",&i);                                                                               
+	if(i==1)                
+	   r = maximum_of_two_numbers();                                                                 
+	else if(i==2)                                                                                 
+	   r = minimum_of_two_numbers();                                                                 
+	else                                                                                          
+   	   printf("invalid input\n");                                                                      
+    printf("%d",r);
+    printf("\nenter your choice:\n1.to continue this topic\n2.menu\n3.exit\n");
+    scanf("%d",&d);
+ 	if(d == 1)
+ 	   if_statements();
+	else if(d == 2)
+	   return 0;
+	else
+	   exit(0);                                                                                      
+} 
+                                                                                            
+int arrays() {                                                                                 
+    int i,r,d;            
+    printf("\nenter your choice:\n1.sum_of_array\n2.number_of_evennum_in_array\n");
+    scanf("%d",&i);                  
+	if(i==1)                                                                                      
+	   r = sum_of_array();                                                                           
+	else if(i==2)                                                                                 
+	   r=number_of_evennum_in_array();                                                               
+	else                                                                                          
+	   printf("invalid input\n");                                                                      
+    printf("%d",r);
+    printf("\nenter your choice:\n1.to continue this topic\n2.menu\n3.exit\n");
+    scanf("%d",&d);
+	if(d == 1)
+	   arrays();
+	else if(d == 2)
+ 	   return 0;
+	else
+ 	   exit(0);                                                                                      
+} 
+                                                                                            
+int factorial() {  
+    int n,x;                                                                                      
+    printf("enter a number to find its factorial:\n");                                              
+    scanf("%d",&n);                                                                               
+    x=fact(n);                                                                                    
+    return x;                                                                                     
+} 
+                                                                                            
+int fact(int n) {                                                                             
+	if(n==1)                                                                                      
+	   return 1;                                                                                     
+	else                                                                                          
+	   return n * fact(n-1);                                                                         
+} 
+                                                                                            
+int sum() {                                                                                   
+   int n,x;                                                                                      
+   printf("enter a number to perform addition:\n");                                                 
+   scanf("%d",&n);                                                                               
+   x =sumnum(n);                                                                                 
+   return x;                                                                                     
+} 
+                                                                                            
+int sumnum(int n) {                                                                           
+	if(n==1)                                                                                      
+	   return 1;                                                                                     
+	else                                                                                          
+	   return n + sumnum(n-1);                                                                       
+}
+                                                                                             
+int sum_of_numbers_in_range() {                                                               
+    int sum = 0;                                                                                  
+    int a ,b,i;                                                                                   
+    printf("enter range:\n");                                                                        
+    scanf("%d%d",&a,&b);                                                                          
+      for(i=a;i<=b;i++) {                                                                           
+          sum = sum + i;                                                                                
+      }                                                                                             
+    return sum;                                                                                   
+}
+                                                                                             
+int multiplication_in_range() {                                                               
+    int mul = 1;                                                                                      
+    int a,i,b;                                                                                    
+    printf("enter range:\n");                                                                        
+    scanf("%d%d",&a,&b);                                                                          
+       for(i=a;i<=b;i++) {                                                                           
+            mul = mul * i;                                                                                
+    }                                                                                             
+    return mul;                                                                                   
+}
+                                                                                             
+int maximum_of_two_numbers() {                                                                
+    int a,b,max;                                                                                  
+    printf("enter two values:\n");                                                                   
+    scanf("%d%d",&a,&b);                                                                          
+        if(a > b)                                                                                     
+	   max=a;                                                                                        
+	else                                                                                          
+	   max=b;                                                                                        
+    return max;                                                                                   
+}  
+                                                                                           
+int minimum_of_two_numbers() {                                                                
+    int a,b,min;                                                                                  
+    printf("enter two numbers:\n");                                                                  
+    scanf("%d%d",&a,&b);                                                                          
+	if(a < b)                                                                                     
+ 	   min = a;                                                                                      
+	else                                                                                          
+	   min = b;                                                                                      
+    return min;                                                                                   
+} 
+                                                                                            
+int sum_of_array() {                                                                          
+    int n,a[n],i,sum = 0;                                                                         
+    printf("enter array size:\n");                                                                            
+    scanf("%d",&n);                                                                               
+    printf("enter array:\n");                                                                        
+	for(i=0;i<n;i++)                                                                              
+          scanf("%d",&a[i]);                                                                            
+ 	for(i=0;i<n;i++)                                                                              
+           sum = sum + a[i];                                                                             
+    return sum;                                                                                   
+} 
+                                                                                            
+int number_of_evennum_in_array() {                                                                       
+    int n,c=0,i,a[n];                                                                             
+    printf("enter array size:\n");                                                                         
+    scanf("%d",&n);                                                                               
+    printf("enter array:\n");                                                                        
+	for(i=0;i<n;i++)                                                                              
+           scanf("%d",&a[i]);                                                                            
+	for(i=0;i<n;i++)                                                                              
+ 	{                                                                                             
+	  if(a[i] % 2 == 0)                                                                             
+	   c++;                                                                                          
+	}                                                                                             
+    return c;                                                                                     
+} 
+                                                                                            
+int main(int argc,char* argv[]) {                                                             
+
+    char a[] = "recursion";                                                                       
+    char b[] = "loops";                                                                           
+    char c[] = "if_statements";                                                                   
+    char d[] = "arrays";                                                                          
+    int result;                                                                                   
+	    if(strcmp(argv[1],a) == 0)                                                                    
+               result = recursion();                                                                         
+	    else if(strcmp(argv[1],b) == 0)                                                               
+	       result=loops();                                                                               
+ 	    else if(strcmp(argv[1],c) == 0)                                                               
+	       result = if_statements();                                                                     
+	    else if(strcmp(argv[1],d) == 0)                                                               
+	       result = arrays();                                                                            
+	    else                                                                                          
+               printf("invalid input");                                                                      
+     if(result == 0)
+         gotomenu();                                                    
+return 0;     
+}             
+int gotomenu() {
+    int i;
+    printf("\nenter your choice:\n1.recursion\n2.loops\n3.if_statements\n4.arrays\n");
+    scanf("%d",&i);
+    if(i == 1)
+        recursion();
+    else if(i == 2)
+        loops();
+    else if(i == 3)
+        if_statements();
+    else if(i == 4)
+        arrays();
+    else
+        printf("invalid input\n");
+   return 0;
+}
